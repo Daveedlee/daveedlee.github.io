@@ -1,0 +1,120 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.mobile-menu, .mobile-title{
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: calc(100% * 1.75);
+}
+
+.section p {
+    margin-top: 40px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.section:hover p {
+    overflow-y: scroll;
+    cursor: ns-resize;
+}
+
+.section {
+    box-sizing: border-box;
+    position: relative;
+    padding: 2%;
+    margin: 2px;
+    float: left;
+    border: 1px solid black;
+}
+
+.section-title {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    background-color: #ccc; 
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    font-size: calc(100% * 1.25);
+}
+
+
+.section-1 { 
+    background-color: #d9868d; 
+}
+
+.section-2 {
+     background-color: #73949a; 
+}
+
+.section-3 {
+     background-color: #8eaf97; 
+}
+
+.section-1 .section-title, .section-1 .mobile-title  { 
+    background-color: #721c24; 
+    color: #fff; 
+}
+
+.section-2 .section-title, .section-2 .mobile-title { 
+    background-color: #0c5460; 
+    color: #fff; 
+}
+
+.section-3 .section-title, .section-3 .mobile-title {
+     background-color: #155724; 
+     color: #fff; 
+}
+
+/********** Large devices only **********/
+@media (min-width: 992px) {
+    .section {
+        width: calc(33.33% - 4px);
+    }
+}
+
+/********** Medium devices only **********/
+@media (min-width:768px) and (max-width: 991px) {
+    .section {
+        width: calc(50% - 4px);
+    }
+}
+
+/********** Small devices only **********/
+@media (max-width: 767px) {
+    .section {
+        width: calc(100% - 4px);
+    }
+
+    h1, .section-title {
+      display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        font-family: system-ui, 'Segoe UI';
+        text-align: left;
+    }
+
+    .mobile-title {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        white-space: normal;
+        background-color: #ccc; 
+        border: 1px solid black;
+        margin: 10px;
+        font-size: calc(100% * 1.25);
+    }
+
+    .section p {
+        padding-top: 20px;
+    }
+}
