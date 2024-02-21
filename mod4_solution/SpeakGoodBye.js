@@ -1,4 +1,4 @@
-(function () {
+(function (window) {
 
   let byeSpeaker = new Object;
 
@@ -13,5 +13,5 @@
 
   window.byeSpeaker = byeSpeaker;
 
-})();
+})(window);
 

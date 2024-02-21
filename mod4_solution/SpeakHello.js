@@ -1,4 +1,4 @@
-(function () {
+(function (window) {
 
 let helloSpeaker = new Object();
 
@@ -14,4 +14,4 @@ helloSpeaker.speakSimple = function(name){
 
 window.helloSpeaker = helloSpeaker;
 
-}) ();
+})(window);
