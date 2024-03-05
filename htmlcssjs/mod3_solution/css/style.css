@@ -1,0 +1,17 @@
+.navbar {
+    background-color: grey;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 50px;
+  }
+
+.menu-box {
+    background-color: grey;
+    height: 700px;
+}
