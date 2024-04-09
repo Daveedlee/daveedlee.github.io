@@ -1,0 +1,11 @@
+<ul class="list-group mt-3">
+    <li class="list-group-item" ng-repeat="item in list.found track by $index">
+        <div class="d-flex justify-content-between align-items-start">
+            <div>
+                <h6 class="mb-1 font-weight-bold">{{ item.name }}</h6>
+                <p class="mb-0">{{ item.description }}</p>
+            </div>
+            <button ng-click="list.onRemove({index: $index});" class="btn btn-outline-danger btn-sm" style="min-width: 120px;">Don't want this one!</button>
+        </div>
+    </li>
+</ul>
