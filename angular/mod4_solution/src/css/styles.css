@@ -1,0 +1,28 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.home-container, .categories-container, .items-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

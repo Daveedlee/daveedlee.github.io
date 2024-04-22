@@ -1,0 +1,9 @@
+<div>
+    <h2>Items in Category: {{ $ctrl.items.category.name }}</h2>
+    <ul>
+        <li ng-repeat="item in itemsCtrl.items">
+            {{ item.name }} - {{ item.description }}
+        </li>
+    </ul>
+    <a ui-sref="categories">Back to Categories</a>
+</div>
