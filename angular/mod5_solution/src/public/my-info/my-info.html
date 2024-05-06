@@ -1,0 +1,31 @@
+<div class="my-info container">
+    <div ng-if="myInfoCtrl.user && myInfoCtrl.user.firstName" class="row">
+        <div class="col-md-12">
+            <h2>Registered Information</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>Name:</strong> {{ myInfoCtrl.user.firstName }} {{ myInfoCtrl.user.lastName }}</p>
+                    <p><strong>Email:</strong> {{ myInfoCtrl.user.email }}</p>
+                    <p><strong>Phone:</strong> {{ myInfoCtrl.user.phone }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <h3>Favorite Menu Item</h3>
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>Title:</strong> {{ myInfoCtrl.user.favoriteMenu }}</p>
+                    <img class="img-fluid" ng-src="{{ 'images/menu/' + myInfoCtrl.user.favoriteMenuNumber[0] + '/' + myInfoCtrl.user.favoriteMenuNumber + '.jpg' }}" alt="{{ myInfoCtrl.user.favoriteMenu }}">
+                    <p><strong>Description:</strong> {{ myInfoCtrl.user.favoriteMenuDescription }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="!myInfoCtrl.user.firstName" class="row">
+        <div class="col-md-12">
+            <p>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></p>
+        </div>
+    </div>
+</div>
