@@ -1,4 +1,26 @@
-import { useState, useMemo } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watch Investment Scorecard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f172a; color: #e2e8f0; font-family: Outfit, sans-serif; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #1e293b; }
+  ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useMemo } = React;
+
 const W = [
   { id:1, brand:"Breitling", model:"Navitimer Vintage", ref:"806", src:"Chrono24", price:6500, tgt:5500, mv:"Cal. Venus 178 (manual)", mvT:"In-house", mat:"Steel", mm:41, wr:30, url:"https://www.chrono24.com/breitling/navitimer--mod37.htm", s:{deal:7,prv:5,mvc:7,her:10,rar:7,enj:7,svc:6,vdn:8,res:5,mkt:6,sprts:3,soul:9}, n:"6500. NOT shower-safe. 1960s Navitimer. THE pilots watch. Slide rule bezel. Venus 178 manual wind. Heritage:10. Soul:9." },
   { id:2, brand:"Nomos", model:"Zürich Worldtimer Midnight Blue", ref:"807", src:"Grand Central Watch", price:5750, tgt:5060, mv:"Automatic", mvT:"Modified", mat:"Steel", mm:39, wr:50, url:"https://centralwatch.com/shop/pre-owned/nomos-z-rich-worldtimer-midnight-blue", s:{deal:7,prv:6,mvc:5,her:4,rar:5,enj:8,svc:7,vdn:7,res:3,mkt:4,sprts:5,soul:6}, n:"GCW $5,750. Excellent. Navy Blue dial. 2014. NOT shower-safe." },
@@ -503,7 +525,8 @@ const C=[{k:"mvc",a:"MvC",l:"Movement & Craft",d:"In-house, finishing, complicat
 const ov=s=>C.reduce((t,c)=>t+(s[c.k]||0)*c.w,0);
 const SB=({v})=>(<div style={{display:"flex",alignItems:"center",gap:2}}><div style={{width:34,height:4,background:"#1a1a2e",borderRadius:2,overflow:"hidden"}}><div style={{width:`${v*10}%`,height:"100%",borderRadius:2,background:v>=9?"#22c55e":v>=7?"#eab308":v>=5?"#f97316":"#ef4444"}}/></div><span style={{fontSize:8,color:"#94a3b8",fontFamily:"'JetBrains Mono',monospace",width:9}}>{v}</span></div>);
 
-export default function App(){
+
+function App(){
   const[sk,setSk]=useState("overall");
   const[sd,setSd]=useState("desc");
   const[fS,setFS]=useState("All");
@@ -627,3 +650,9 @@ export default function App(){
     </div>
   );
 }
+
+
+ReactDOM.render(React.createElement(App), document.getElementById("root"));
+</script>
+</body>
+</html>
